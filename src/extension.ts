@@ -4,12 +4,14 @@ import * as vscode from 'vscode';
 
 // this method is called when your extension is activated
 export function activate(context: vscode.ExtensionContext) {
+  const disposable = vscode.commands.registerCommand(
+    'tripledot.helloWorld',
+    () => {
+      vscode.window.showInformationMessage('Hello World from tripledot!');
+    },
+  );
 
-	const disposable = vscode.commands.registerCommand('tripledot.helloWorld', () => {
-		vscode.window.showInformationMessage('Hello World from tripledot!');
-	});
-
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 }
 
 // this method is called when your extension is deactivated
