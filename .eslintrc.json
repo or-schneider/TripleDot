@@ -5,7 +5,7 @@
         "ecmaVersion": 6,
         "sourceType": "module"
     },
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
     "plugins": [
         "@typescript-eslint"
     ],
@@ -15,7 +15,8 @@
         "curly": "warn",
         "eqeqeq": "warn",
         "no-throw-literal": "warn",
-        "semi": "off"
+        "semi": "off",
+        "@typescript-eslint/no-empty-function":"off"
     },
     "ignorePatterns": [
         "out",
