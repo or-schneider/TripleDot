@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 // this method is called when your extension is activated
 export function activate(context: vscode.ExtensionContext) {
 
-	let disposable = vscode.commands.registerCommand('tripledot.helloWorld', () => {
+	const disposable = vscode.commands.registerCommand('tripledot.helloWorld', () => {
 		vscode.window.showInformationMessage('Hello World from tripledot!');
 	});
 
